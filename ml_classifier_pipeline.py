@@ -49,7 +49,9 @@ print("=" * 80)
 print("  PHASE 1: FEATURE ENGINEERING")
 print("=" * 80)
 
-df = pd.read_csv(r"C:\Users\Admin\Desktop\Notes\ML\churn\data\Churn_Modelling.csv")
+import os
+DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "Churn_Modelling.csv")
+df = pd.read_csv(DATA_PATH)
 
 # Encode
 le = LabelEncoder()
